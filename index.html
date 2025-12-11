@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harisman — Portfolio</title>
+
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/myicon.jpeg">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/myicon.jpeg">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+	<body>
+
+		<!-- NAVBAR -->
+			<header class="navbar">
+				<div class="logo">
+					<img src="assets/img/myicon.jpeg" alt="logo" />
+						<span>haristech.space</span>
+				</div>
+
+		<!-- Desktop nav -->
+			<nav class="nav-links" role="navigation" aria-label="Main">
+				<a href="#about">About</a>
+					<a href="#portfolio">Portfolio</a>
+						<a href="#news">News</a>
+							<a href="#footer">Contact</a>
+
+		<!-- dark mode icon (desktop) -->
+			<button id="darkModeBtn" class="icon-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+			</nav>
+			
+		<!-- Mobile controls -->
+			<div class="mobile-nav">
+				<button id="mobileDarkBtn" class="icon-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+					<button id="hamburgerBtn" class="hamburger" aria-label="Open menu">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+			</header>
+
+		<!-- MOBILE MENU -->
+			<div id="mobileMenu" class="mobile-menu">
+				<a href="#about">About</a>
+					<a href="#portfolio">Portfolio</a>
+						<a href="#news">News</a>
+							<a href="#footer">Contact</a>
+			</div>
+
+		<!-- MAIN CONTENT -->
+			<main>
+
+				<!-- HERO -->
+					<section class="hero" id="home">
+						<div class="hero-left">
+							<h1>Hi, I'm <strong>Harisman</strong> - $RE</h1>
+								<p><h4>Always adopt the latest technology, specialist in architectures backend design,
+									proven in project management and fluent to critical level projects.</h4></p>
+									<div class=hero-buttons">
+										<a href="#portfolio" class="btn btn-primary">Get Started</a>
+											<a href="#footer" class="btn btn-outline">Contact Me</a>
+									</div>
+								</div>
+
+					<div class="hero-right">
+						<div class="profile-frame">
+							<img src="assets/img/haris.jpeg" alt="Profile photo of Harisman" loading="lazy"/>
+								<div class="status-pill">
+									<span class="dot red"></span>
+										<span class="dot green"></span>
+											<span>Open To Discussion</span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- ABOUT ME -->
+					<section id="about" class="about">
+						<h2>About Me</h2>
+
+							<div class="about-cards">
+								<article class="about-card">
+									<h3><i class="fas fa-user"></i> Biography</h3>
+
+										<ul class="star-list">
+											<li>Short bio summary</li>
+												<li>Another short statement about background.</li>
+													</ul>
+
+													<button class="more-btn">More Detail</button>
+														<div class="more-content">
+															<ul class="star-list">
+																<li>was born and lives in jakarta 20 September.</li>
+																<li>grew up in a simple family</li>
+																<li>having minang blood and being of the chaniago ethhnicity</li>
+															</ul>
+														</div>
+												</article>
+
+								<article class="about-card">
+									<h3><i class="fas fa-fire"></i> Passionate</h3>
+
+										<ul class="star-list">
+											<li>What drives me: craft, learning, automation technologies.</li>
+												<li>Always exploring modern Techstacks.</li>
+											</ul>
+
+												<button class="more-btn">More Detail</button>
+													<div class="more-content">
+														<ul class="star-list">
+																<li>Linux | Unix Fundamentals.</li>
+																<li>DBMS | NoSQL.</li>
+																<li>Paas | Iaas | Saas | Iac.</li>
+																<li>Orchestration tools.</li>
+																<li>Framework Spring| Django | Go.</li>
+																<li>Confluence | Jira.</li>
+																<li>Kanban | Scrum.</li>
+															</ul>
+														</div>
+												</article>
+
+													<article class="about-card">
+														<h3><i class="fas fa-flag-checkered"></i> Milestone</h3>
+
+															<ul class="star-list">
+																<li>Scratch achievements.</li>
+																	<li>Completed notable projects and collaborations.</li>
+																</ul>
+
+																	<button class="more-btn">More Detail</button>
+																		<div class="more-content">
+																			<ul class="star-list">
+																				<li>Incident Handling & Problem Solving Production(Real Case).</li>
+																				<li>Database Architecture & High Availability (HA).</li>
+																				<li>Backup, Recovery & Disaster Recovery (DR).</li>
+																				<li>Performance Tuning & Optimization.</li>
+																				<li>Migration & Upgrade Projects.</li>
+																				<li>Adopt of Automations Tech.</li>
+																			</ul>
+																		</div>
+																</article>
+															</div>
+													</section>
+
+				<!-- PORTFOLIO (infinite slider) -->
+					<!-- MY PROJECTS -->
+						<!-- =======================
+							MY PROJECTS / PORTFOLIO
+							=========================== -->
+
+								<section id="portfolio" class="portfolio">
+									<h2>My Projects</h2>
+
+										<div class="portfolio-slider" id="portfolioSlider">
+
+											<!-- PROJECT ITEM 1 -->
+												<article class="project-card">
+													<div class="project-img"></div>
+
+														<div class="project-content">
+															<h3>Project A</h3>
+																<p>Web application for ecommerce prototype.</p>
+
+																	<button class="project-btn">More Detail</button>
+
+																		<div class="project-detail">
+																			<p>Built with clean architecture and optimized workflow.</p>
+
+																				<div class="tech-icons">
+																					<i class="fab fa-github"></i>
+																						<i class="fas fa-database"></i>
+																							<i class="fas fa-leaf"></i>
+																								<i class="fab fa-java"></i>
+																							</div>
+																						</div>
+																					</div>
+																			</article>
+
+											<!-- PROJECT ITEM 2 -->
+												<article class="project-card">
+													<div class="project-img"></div>
+
+														<div class="project-content">
+															<h3>Project B</h3>
+																<p>Inventory system dashboard with analytics.</p>
+
+        <button class="project-btn">More Detail</button>
+
+        <div class="project-detail">
+          <p>Fast backend integration and modular UI components.</p>
+
+          <div class="tech-icons">
+            <i class="fab fa-github"></i>
+            <i class="fas fa-database"></i>
+            <i class="fas fa-leaf"></i>
+            <i class="fab fa-java"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT ITEM 3 -->
+    <article class="project-card">
+      <div class="project-img"></div>
+
+      <div class="project-content">
+        <h3>Project C</h3>
+        <p>Landing page with responsive and smooth UX.</p>
+
+        <button class="project-btn">More Detail</button>
+
+        <div class="project-detail">
+          <p>Lightweight, flexible layout, scalable animation system.</p>
+
+          <div class="tech-icons">
+            <i class="fab fa-github"></i>
+            <i class="fas fa-database"></i>
+            <i class="fas fa-leaf"></i>
+            <i class="fab fa-java"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+	
+	<!-- PROJECT ITEM 4 -->
+    <article class="project-card">
+      <div class="project-img"></div>
+
+      <div class="project-content">
+        <h3>Project D</h3>
+        <p>Landing page with responsive and smooth UX.</p>
+
+        <button class="project-btn">More Detail</button>
+
+        <div class="project-detail">
+          <p>Lightweight, flexible layout, scalable animation system.</p>
+
+          <div class="tech-icons">
+            <i class="fab fa-github"></i>
+            <i class="fas fa-database"></i>
+            <i class="fas fa-leaf"></i>
+            <i class="fab fa-java"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+	
+	<!-- PROJECT ITEM 5 -->
+    <article class="project-card">
+      <div class="project-img"></div>
+
+      <div class="project-content">
+        <h3>Project E</h3>
+        <p>Landing page with responsive and smooth UX.</p>
+
+        <button class="project-btn">More Detail</button>
+
+        <div class="project-detail">
+          <p>Lightweight, flexible layout, scalable animation system.</p>
+
+          <div class="tech-icons">
+            <i class="fab fa-github"></i>
+            <i class="fas fa-database"></i>
+            <i class="fas fa-leaf"></i>
+            <i class="fab fa-java"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+	
+	<!-- PROJECT ITEM 6 -->
+    <article class="project-card">
+      <div class="project-img"></div>
+
+      <div class="project-content">
+        <h3>Project F</h3>
+        <p>Landing page with responsive and smooth UX.</p>
+
+        <button class="project-btn">More Detail</button>
+
+        <div class="project-detail">
+          <p>Lightweight, flexible layout, scalable animation system.</p>
+
+          <div class="tech-icons">
+            <i class="fab fa-github"></i>
+            <i class="fas fa-database"></i>
+            <i class="fas fa-leaf"></i>
+            <i class="fab fa-java"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+ <!-- RECENT UPDATES (infinite slider + auto) -->
+	<!-- RECENT UPDATES -->
+<!-- RECENT UPDATES -->
+<section id="updates" class="updates">
+  <h2>Recent Updates</h2>
+
+  <div class="updates-wrapper">
+    <div class="updates-track">
+      
+      <div class="update-card">
+        <h3>GitHub New Repo</h3>
+        <p>Added new AI Automation project.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">GitHub Link</a>
+        </div>
+      </div>
+
+      <div class="update-card">
+        <h3>LinkedIn Post</h3>
+        <p>Shared about backend performance tuning.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">LinkedIn Article</a>
+        </div>
+      </div>
+
+      <div class="update-card">
+        <h3>System Design</h3>
+        <p>Uploaded new architecture diagram.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">View Diagram</a>
+        </div>
+      </div>
+
+      <div class="update-card">
+        <h3>Tech Research</h3>
+        <p>Experimented with Mongo performance test.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">Research Notes</a>
+        </div>
+      </div>
+	  
+	  <div class="update-card">
+        <h3>LinkedIn Post</h3>
+        <p>Shared about backend performance tuning.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">LinkedIn Article</a>
+        </div>
+      </div>
+	  
+	  <div class="update-card">
+        <h3>LinkedIn Post</h3>
+        <p>Shared about backend performance tuning.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">LinkedIn Article</a>
+        </div>
+      </div>
+	  
+	  <div class="update-card">
+        <h3>LinkedIn Post</h3>
+        <p>Shared about backend performance tuning.</p>
+        <button class="update-more">More Detail</button>
+        <div class="update-detail">
+          <a href="#" target="_blank">LinkedIn Article</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>  <!-- MAIN CONTENT Akhiran-->
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="footer" id="footer">
+  <div class="footer-container">
+
+    <!-- LEFT: FOLLOW ME -->
+    <div class="footer-section follow">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <!-- CENTER: NAVIGATION -->
+    <div class="footer-section navigation">
+      <h3>Navigation</h3>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: CONTACT FORM -->
+    <div class="footer-section contact">
+      <h3>I Would Like To Discuss</h3>
+      <form action="mailto:yourmail@example.com" method="POST" enctype="text/plain">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Mobile Number" required>
+        <textarea placeholder="Message..." rows="4" required></textarea>
+		<label class="agree-wrap">
+          <input type="checkbox" id="agreeCheck" required>
+          <span>I acknowledge and agree</span>
+        </label>
+
+<button class="btn-primary submit-btn">Submit</button>
+
+      </form>
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- MAIN JS -->
+  <script src="js/script.js"></script>
+   <!-- MAIN JS ENDs-->
+   
+   <div class="footer-copy">
+    © <span id="copyYearStart">2025</span> – <span id="copyYear"></span> Harisman. All rights reserved.
+</div>
+
+   
+</body>
+</html>
