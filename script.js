@@ -110,3 +110,23 @@ initInfiniteSlider(".news-slider", "#newsNext", "#newsPrev");
    AUTO UPDATE COPYRIGHT YEAR
 ================================*/
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* email request form */
+emailjs.init("PUBLIC_KEY");
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.send("SERVICE_ID", "TEMPLATE_ID", {
+        fullname: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        topic: document.getElementById("topic").value,
+        message: document.getElementById("message").value
+    })
+    .then(function(){
+        alert("Message sent!");
+    }, function(error){
+        alert("FAILED: " + JSON.stringify(error));
+    });
+});
