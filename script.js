@@ -334,7 +334,7 @@ document.querySelectorAll(".update-more").forEach(btn => {
 
 /* ===============================
    RANDOM PROJECT BACKGROUND IMAGE
-================================= */
+================================= 
 
 const projectImages = [
   "https://picsum.photos/600/400?random=1",
@@ -353,6 +353,14 @@ const projectImages = [
 document.querySelectorAll(".project-img").forEach((img, index) => {
   const randomIndex = Math.floor(Math.random() * projectImages.length);
   img.style.backgroundImage = `url(${projectImages[randomIndex]})`;
+}); */
+
+const projectImages = document.querySelectorAll(".project-img");
+
+projectImages.forEach((img, index) => {
+  const randomSeed = Math.floor(Math.random() * 1000) + index;
+  img.style.backgroundImage = 
+    `url("https://picsum.photos/600/400?random=${randomSeed}")`;
 });
 
   /* ---------------------------
