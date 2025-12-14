@@ -332,6 +332,28 @@ document.querySelectorAll(".update-more").forEach(btn => {
   });
 });
 
+/* ===============================
+   RANDOM PROJECT BACKGROUND IMAGE
+================================= */
+
+const projectImages = [
+  "https://picsum.photos/600/400?random=1",
+  "https://picsum.photos/600/400?random=2",
+  "https://picsum.photos/600/400?random=3",
+  "https://picsum.photos/600/400?random=4",
+  "https://picsum.photos/600/400?random=5",
+  "https://picsum.photos/600/400?random=6",
+  "https://picsum.photos/600/400?random=7",
+  "https://picsum.photos/600/400?random=8",
+  "https://picsum.photos/600/400?random=9",
+  "https://picsum.photos/600/400?random=10",
+  "https://picsum.photos/600/400?random=11",
+];
+
+document.querySelectorAll(".project-img").forEach((img, index) => {
+  const randomIndex = Math.floor(Math.random() * projectImages.length);
+  img.style.backgroundImage = `url(${projectImages[randomIndex]})`;
+});
 
   /* ---------------------------
      Footer year
