@@ -355,6 +355,10 @@ document.querySelectorAll(".project-img").forEach((img, index) => {
   img.style.backgroundImage = `url(${projectImages[randomIndex]})`;
 }); */
 
+/* =========================
+   RANDOM PROJECT IMAGES
+========================= */
+
 const projectImages = document.querySelectorAll(".project-img");
 
 projectImages.forEach((img, index) => {
