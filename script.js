@@ -369,22 +369,21 @@ projectImages.forEach((img, index) => {
 
 
 /* Scroll To Top */
-const scrollTopBtn = document.getElementById("scrollTopBtn");
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (!scrollTopBtn) return;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollTopBtn.classList.add("show");
-  } else {
-    scrollTopBtn.classList.remove("show");
-  }
-});
+  window.addEventListener("scroll", () => {
+    scrollTopBtn.classList.toggle("show", window.scrollY > 300);
+  });
 
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+
+
 
 
   /* ---------------------------
