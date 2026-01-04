@@ -369,22 +369,22 @@ projectImages.forEach((img, index) => {
 
 
 /* Scroll To Top */
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
-  if (!scrollTopBtn) return;
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-  window.addEventListener("scroll", () => {
-    scrollTopBtn.classList.toggle("show", window.scrollY > 300);
-  });
-
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
 });
 
-
-
-
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
   /* ---------------------------
      Footer year
