@@ -368,7 +368,7 @@ projectImages.forEach((img, index) => {
 });
 
 
-/* Scroll To Top */
+/* Scroll To Top 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
@@ -384,7 +384,7 @@ scrollBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth"
   });
-});
+}); */
 
   /* ---------------------------
      Footer year
