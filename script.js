@@ -369,22 +369,18 @@ projectImages.forEach((img, index) => {
 });
 
 /* Scroll To Top */
+console.log("JS OK HOSTINGER");
+
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("show");
-  } else {
-    scrollBtn.classList.remove("show");
-  }
+  scrollBtn.classList.toggle("show", window.scrollY > 200);
 });
 
 scrollBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
 
 
   /* ---------------------------
