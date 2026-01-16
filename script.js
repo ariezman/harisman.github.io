@@ -363,68 +363,26 @@ document.querySelectorAll(".project-img").forEach((img, index) => {
 /* =========================
    Scroll To Top Button
 ========================= */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
-  /* ======================
-     HAMBURGER MENU
-  ====================== */
-  const hamburgerBtn = document.getElementById("hamburgerBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
+  if (!scrollBtn) return;
 
-  if (hamburgerBtn && mobileMenu) {
-    hamburgerBtn.addEventListener("click", () => {
-      hamburgerBtn.classList.toggle("active");
-      mobileMenu.classList.toggle("show");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
-  }
-
-  /* ======================
-     SCROLL TO TOP
-  ====================== */
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-  if (scrollTopBtn) {
-    window.addEventListener("scroll", () => {
-      scrollTopBtn.style.display =
-        window.scrollY > 300 ? "flex" : "none";
-    });
-
-    scrollTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  /* ======================
-     WHATSAPP FLOATING BTN
-  ====================== */
-  const whatsappBtn = document.getElementById("whatsappBtn");
-  if (whatsappBtn) {
-    whatsappBtn.style.display = "flex";
-  }
-
-  /* ======================
-     SAFE PORTFOLIO SLIDER
-  ====================== */
-  const slider = document.getElementById("portfolioSlider");
-
-  if (slider) {
-    let direction = 1;
-    let speed = 1;
-
-    setInterval(() => {
-      slider.scrollLeft += direction * speed;
-
-      if (slider.scrollLeft <= 0) direction = 1;
-      if (
-        slider.scrollLeft + slider.clientWidth >=
-        slider.scrollWidth - 2
-      ) direction = -1;
-    }, 16);
-  }
-
+  });
 });
-
-
 
 
   /* ---------------------------
