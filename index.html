@@ -540,20 +540,35 @@
 			</main>  <!-- MAIN CONTENT Akhiran-->
 			
 						<!-- Scroll To Top -->
-									<button id="scrollTopBtn" aria-label="Scroll to top">
- 													 ↑
-														</button>
-														    <i class="fas fa-chevron-up"></i>
+									<button id="scrollTopBtn">⬆</button>
 
-								<!-- WhatsApp Floating -->
-										<a
-  											id="whatsappBtn"
-  													href="https://wa.me/628123456789"
-  															target="_blank"
-  																	rel="noopener"
-  																			aria-label="Chat via WhatsApp">
- 										 												<i class="fab fa-whatsapp"></i>
-																				</a>
+<script>
+  (function () {
+    const btn = document.getElementById("scrollTopBtn");
+
+    if (!btn) {
+      console.error("scrollTopBtn NOT FOUND");
+      return;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        btn.style.opacity = "1";
+        btn.style.visibility = "visible";
+        btn.style.transform = "translateY(0)";
+      } else {
+        btn.style.opacity = "0";
+        btn.style.visibility = "hidden";
+        btn.style.transform = "translateY(20px)";
+      }
+    });
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+</script>
+
 
 						<!-- FOOTER / CONTACT -->
 							<footer class="footer" id="footer">
