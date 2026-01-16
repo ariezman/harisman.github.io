@@ -360,26 +360,26 @@ document.querySelectorAll(".project-img").forEach((img, index) => {
    RANDOM PROJECT IMAGES
 ========================= */
 
-const projectImages = document.querySelectorAll(".project-img");
-
-projectImages.forEach((img, index) => {
-  const randomSeed = Math.floor(Math.random() * 1000) + index;
-  img.style.backgroundImage = 
-    `url("https://picsum.photos/600/400?random=${randomSeed}")`;
-});
-
-/* Scroll To Top */
-console.log("JS OK HOSTINGER");
-
-const scrollBtn = document.getElementById("scrollTopBtn");
+/* =========================
+   Scroll To Top Button
+========================= */
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
-  scrollBtn.classList.toggle("show", window.scrollY > 200);
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = "flex";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
 });
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
+
 
 
 
