@@ -219,8 +219,8 @@ hamburgerBtn.addEventListener("click", () => {
     startAuto();
 
     return { startAuto, stopAuto, track };
-	
-	// Toggle More Details
+  
+  // Toggle More Details
 document.querySelectorAll('.proj-more-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     const content = btn.nextElementSibling;
@@ -295,7 +295,7 @@ document.querySelectorAll(".project-btn").forEach(btn => {
 const updatesTrack = document.querySelector(".updates-track");
 let updatesDirection = 1; 
 let updatesPos = 0;
-let updatesSpeed = 0.4;
+let updatesSpeed = 1;
 let stopUpdates = false;
 
 const updateCards = document.querySelectorAll(".update-card");
@@ -332,6 +332,60 @@ document.querySelectorAll(".update-more").forEach(btn => {
   });
 });
 
+/* ===============================
+   RANDOM PROJECT BACKGROUND IMAGE
+=================================
+
+const projectImages = [
+  "https://picsum.photos/600/400?random=1",
+  "https://picsum.photos/600/400?random=2",
+  "https://picsum.photos/600/400?random=3",
+  "https://picsum.photos/600/400?random=4",
+  "https://picsum.photos/600/400?random=5",
+  "https://picsum.photos/600/400?random=6",
+  "https://picsum.photos/600/400?random=7",
+  "https://picsum.photos/600/400?random=8",
+  "https://picsum.photos/600/400?random=9",
+  "https://picsum.photos/600/400?random=10",
+  "https://picsum.photos/600/400?random=11",
+];
+
+document.querySelectorAll(".project-img").forEach((img, index) => {
+  const randomIndex = Math.floor(Math.random() * projectImages.length);
+  img.style.backgroundImage = `url(${projectImages[randomIndex]})`;
+});
+*/
+
+/* =========================
+   RANDOM PROJECT IMAGES
+========================= */
+
+const projectImages = document.querySelectorAll(".project-img");
+
+projectImages.forEach((img, index) => {
+  const randomSeed = Math.floor(Math.random() * 1000) + index;
+  img.style.backgroundImage = 
+    `url("https://picsum.photos/600/400?random=${randomSeed}")`;
+});
+
+/* Scroll To Top */
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
 
   /* ---------------------------
      Footer year
@@ -357,5 +411,26 @@ const yearSpan = document.getElementById("copyYear");
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
+
+
+/* email request form */
+emailjs.init("PUBLIC_KEY");
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.send("SERVICE_ID", "TEMPLATE_ID", {
+        fullname: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        topic: document.getElementById("topic").value,
+        message: document.getElementById("message").value
+    })
+    .then(function(){
+        alert("Message sent!");
+    }, function(error){
+        alert("FAILED: " + JSON.stringify(error));
+    });
+});
 
 
